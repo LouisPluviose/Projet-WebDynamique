@@ -1,0 +1,59 @@
+{% extends "application/main.html" %}
+
+{% block content %}
+<form class="form-horizontal" method="post" action="/application/traitement/">
+{% csrf_token %}
+<fieldset>
+
+<!-- Form Name -->
+<legend>Ajout</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="id_nom">Nom</label>
+  <div class="col-md-4">
+  <input id="id_nom" name="nom" type="text" placeholder="Rafale" class="form-control input-md" required="" maxlength="100">
+  <span class="help-block">Nom de l'avion à ajouter</span>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="id_fabriquant">Fabriquant</label>
+  <div class="col-md-4">
+  <input id="id_fabriquant" name="fabriquant" type="text" placeholder="Dassault Aviation" class="form-control input-md" required="" maxlength="100">
+  <span class="help-block">Nom du fabriquant de l'avion</span>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="id_date_de_production">Date de production</label>
+  <div class="col-md-4">
+  <input id="id_date_de_production" name="date_de_production" type="date" placeholder="01/01/2010" class="form-control input-md">
+  <span class="help-block">Date du début de la production de l'avion</span>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="id_nombre_avion">Nombre d'avion</label>
+  <div class="col-md-4">
+  <input id="id_nombre_avion" name="nombre_avion" type="number" placeholder="350" class="form-control input-md" maxlength="100">
+  <span class="help-block">Nombre d'avions produits</span>
+  </div>
+</div>
+
+<!-- Textarea -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="id_resume">Présentation</label>
+  <div class="col-md-4">
+    <textarea class="form-control" id="id_resume" name="resume"></textarea>
+  </div>
+</div>
+
+<input type="submit" value="envoyer les données"/>
+
+</fieldset>
+</form>
+{% endblock %}

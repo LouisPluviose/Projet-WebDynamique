@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{%static 'application/css/main.css'%}">
+    <title>Wikiplane</title>
+</head>
+<body>
+
+<header class="header">
+    <img src="{%static '/application/images/rafale.jpg'%}">
+    <div class="titre">Wikiplane</div>
+    <div class="soustitre">Votre catalogue de l'avion</div>
+</header>
+
+<div class="navbar">
+    <ul class="navholder">
+        <li><a href="">Home</a></li>
+        <li><a href="">News</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="">About</a></li>
+    </ul>
+</div>
+
+<div class="gabari">
+    <h1>Hello World</h1>
+</div>
+
+{% block content %}
+{% endblock %}
+</body>
+</html>
